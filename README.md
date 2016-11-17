@@ -1,1 +1,10 @@
-# routing-protocols
+--------------------
+To compile
+--------------------
+make all
+
+
+--------------------
+To run
+--------------------
+java Project3
