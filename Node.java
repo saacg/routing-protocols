@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.Arrays;
+import java.util.ArrayList;
 
 /**
  * This is the class that students need to implement. The code skeleton is provided.
@@ -14,10 +15,18 @@ public class Node {
     int[] lkcost;		/*The link cost between this node and other nodes*/
     int[][] costs;  		/*Define distance table*/
     int nodename;               /*Name of this node*/
+    ArrayList<Integer> neighbors;
     
     /* Class constructor */
     public Node() { }
-    
+
+    void tellTheNeighbors() {
+        if(this.lkcost.length > 0 && this.neighbors.size() > 0){
+            for(int neighbor : neighbors){
+                NetworkSimulator.tolayer2(new Packet(this.nodename, neighbor, this.lkcost)); 
+            } 
+        }
+    }    
     /* students to write the following two routines, and maybe some others */
     void rtinit(int nodename, int[] initial_lkcost) {
         
@@ -26,11 +35,19 @@ public class Node {
         this.nodename = nodename; 
         this.costs = new int[size][size];
         this.lkcost = new int[size];
+        this.neighbors = new ArrayList<Integer>();
+        
         Arrays.fill(this.costs, this.INFINITY); // set all distances to INFINITY
+
         for(int i = 0; i < size; i++){
             this.costs[nodename][i] = initial_lkcost[i];
             this.lkcost[i] = initial_lkcost[i];
+            if(initial_lkcost[i] != this.INFINITY && initial_lkcost[i] != 0){
+                this.neighbors.add(i); 
+            }
         }
+        
+        tellTheNeighbors();        
         
     }    
     
