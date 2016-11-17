@@ -37,7 +37,10 @@ public class Node {
         this.lkcost = new int[size];
         this.neighbors = new ArrayList<Integer>();
         
-        Arrays.fill(this.costs, this.INFINITY); // set all distances to INFINITY
+        // initialize all distances in table to INFINITY
+        for(int[] row : this.costs){ 
+            Arrays.fill(row, this.INFINITY);
+        }
 
         for(int i = 0; i < size; i++){
             this.costs[nodename][i] = initial_lkcost[i];
@@ -48,8 +51,12 @@ public class Node {
         }
         
         tellTheNeighbors();        
+
+        System.out.println("Node " + this.nodename + "initialized at " + NetworkSimulator.clocktime);
+        printdt();
         
     }    
+
     
     void rtupdate(Packet rcvdpkt) { 
             if(rcvdpkt.destid == this.nodename){
@@ -60,12 +67,10 @@ public class Node {
 
                 // update distance table
                 for(int i = 0; i < rcvdpkt.mincost.length; i++){
-                    if(i == this.nodename){
-                        this.costs[src][i] = distToSrc; 
-                    } else if(rcvdpkt.mincost[i] == this.INFINITY) {
+                    if(rcvdpkt.mincost[i] == this.INFINITY) {
                         this.costs[src][i] = this.INFINITY;
                     } else {
-                        this.costs[src][i] = rcvdpkt.mincost[i] + distToSrc;
+                        this.costs[src][i] = rcvdpkt.mincost[i] + this.costs[this.nodename][i];
                     }
                 }
 
@@ -78,6 +83,15 @@ public class Node {
                         }
                     }
                 } 
+
+                System.out.println("Node " + this.nodename + "updated by Node " + src + "at " + NetworkSimulator.clocktime);
+                printdt();
+
+                // if the min cost vector has been changed, update the neighbors
+                if(changed){
+                    tellTheNeighbors();
+                }
+
             } else {
                 System.out.println("received someone else's packet!");
             }
