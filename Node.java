@@ -15,7 +15,7 @@ public class Node {
     int[] lkcost;		/*The link cost between this node and other nodes*/
     int[][] costs;  		/*Define distance table*/
     int nodename;               /*Name of this node*/
-    ArrayList<Integer> neighbors;
+    ArrayList<Integer> neighbors; /* list of direct neighbors to this node */
     
     /* Class constructor */
     public Node() { }
@@ -53,17 +53,31 @@ public class Node {
     
     void rtupdate(Packet rcvdpkt) { 
             if(rcvdpkt.destid == this.nodename){
+                    
                 boolean changed = false;
                 int src = rcvdpkt.sourceid;  
                 int distToSrc = this.costs[this.nodename][src];
+
                 // update distance table
                 for(int i = 0; i < rcvdpkt.mincost.length; i++){
-                    if(rcvdpkt.mincost[i] < this.INFINITY){
-                        this.costs[src][i] = rcvdpkt.mincost[i] + distToSrc;
-                    } else {
+                    if(i == this.nodename){
+                        this.costs[src][i] = distToSrc; 
+                    } else if(rcvdpkt.mincost[i] == this.INFINITY) {
                         this.costs[src][i] = this.INFINITY;
+                    } else {
+                        this.costs[src][i] = rcvdpkt.mincost[i] + distToSrc;
                     }
                 }
+
+                // update this node's min cost vector
+                for(int i = 0; i < this.lkcost.length; i++){
+                    for(int j = 0; j < this.lkcost.length; j++){
+                        if(this.costs[i][j] < this.lkcost[i]){
+                            this.lkcost[i] = this.costs[i][j];
+                            changed = true;
+                        }
+                    }
+                } 
             } else {
                 System.out.println("received someone else's packet!");
             }
