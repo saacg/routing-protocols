@@ -51,7 +51,23 @@ public class Node {
         
     }    
     
-    void rtupdate(Packet rcvdpkt) {  }
+    void rtupdate(Packet rcvdpkt) { 
+            if(rcvdpkt.destid == this.nodename){
+                boolean changed = false;
+                int src = rcvdpkt.sourceid;  
+                int distToSrc = this.costs[this.nodename][src];
+                // update distance table
+                for(int i = 0; i < rcvdpkt.mincost.length; i++){
+                    if(rcvdpkt.mincost[i] < this.INFINITY){
+                        this.costs[src][i] = rcvdpkt.mincost[i] + distToSrc;
+                    } else {
+                        this.costs[src][i] = this.INFINITY;
+                    }
+                }
+            } else {
+                System.out.println("received someone else's packet!");
+            }
+    }
     
     
     /* called when cost from the node to linkid changes from current value to newcost*/
