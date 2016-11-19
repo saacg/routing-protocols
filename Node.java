@@ -27,13 +27,14 @@ public class Node {
             for(int neighbor : neighbors){
                 int[] poisonedlkcost = new int[lkcostLength];
                 for(int i = 0; i < lkcostLength; i++){ 
-                    if(this.costs[i][neighbor] == this.lkcost[i]){
+                    if(this.costs[i][neighbor] == this.lkcost[i] && i != this.nodename){
                         poisonedlkcost[i] = this.INFINITY;         
                     } else {
                         poisonedlkcost[i] = this.lkcost[i]; 
                     }
                 }
                 System.out.println("Node " + this.nodename + " sending update to Node " + neighbor + " at " + NetworkSimulator.clocktime);
+                printpsnd(poisonedlkcost, neighbor);
                 NetworkSimulator.tolayer2(new Packet(this.nodename, neighbor, poisonedlkcost));
             } 
         }
@@ -56,18 +57,20 @@ public class Node {
 
         // process the initial cost array into the distance table and min cost array
         for(int i = 0; i < size; i++){
-            this.costs[nodename][i] = initial_lkcost[i];
+            this.costs[this.nodename][i] = initial_lkcost[i];
+            this.costs[i][this.nodename] = initial_lkcost[i];
             this.lkcost[i] = initial_lkcost[i];
             if(initial_lkcost[i] != this.INFINITY && initial_lkcost[i] != 0){
                 this.neighbors.add(i); 
             }
         }
         
+        System.out.println("Node " + this.nodename + " initialized at " + NetworkSimulator.clocktime);
+        printdt();
+        printlkc();
         // send min cost array to direct neighbors 
         tellTheNeighbors();        
 
-        System.out.println("Node " + this.nodename + " initialized at " + NetworkSimulator.clocktime);
-        printdt();
         
     }    
 
@@ -82,9 +85,9 @@ public class Node {
             // update distance table
             for(int i = 0; i < rcvdpkt.mincost.length; i++){
                 if(rcvdpkt.mincost[i] == this.INFINITY) {
-                    this.costs[src][i] = this.INFINITY;
+                    this.costs[i][src] = this.INFINITY;
                 } else {
-                    this.costs[src][i] = rcvdpkt.mincost[i] + this.costs[this.nodename][i];
+                    this.costs[i][src] = rcvdpkt.mincost[i] + this.costs[src][this.nodename];
                 }
             }
 
@@ -106,10 +109,14 @@ public class Node {
 
             System.out.println("Node " + this.nodename + " updated by Node " + src + " at " + NetworkSimulator.clocktime);
             printdt();
+            printlkc();
 
             // if the min cost array has been changed, update the neighbors
             if(changed){
                 tellTheNeighbors();
+            }
+            else {
+                System.out.println("update by Node " + src + " did not change state of Node " + this.nodename + "'s min cost array");
             }
 
         } else {
@@ -161,5 +168,21 @@ public class Node {
 	    break;
         }
     }
-    
+
+    void printlkc(){
+        System.out.printf("min cost array for Node " + this.nodename + ": "); 
+        for(int mincost : lkcost){
+            System.out.printf(mincost + " ");
+        }
+        System.out.println("");
+    }
+
+    void printpsnd(int[] psnArray, int dest){
+        System.out.printf("min cost array  for Node " + this.nodename + " sent to Node " + dest + " after poisoning: "); 
+        for(int mincost : psnArray){
+            System.out.printf(mincost + " ");
+        }
+        System.out.println("");
+
+    }
 }
