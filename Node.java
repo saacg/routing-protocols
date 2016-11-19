@@ -16,15 +16,25 @@ public class Node {
     int[][] costs;  		/*Define distance table*/
     int nodename;               /*Name of this node*/
     ArrayList<Integer> neighbors; /* list of direct neighbors to this node */
-    
+     
     /* Class constructor */
     public Node() { }
 
     // sends min cost array to neighbors
     void tellTheNeighbors() {
-        if(this.lkcost.length > 0 && this.neighbors.size() > 0){
+        int lkcostLength = this.lkcost.length;
+        if(lkcostLength > 0 && this.neighbors.size() > 0){
             for(int neighbor : neighbors){
-                NetworkSimulator.tolayer2(new Packet(this.nodename, neighbor, this.lkcost)); 
+                int[] poisonedlkcost = new int[lkcostLength];
+                for(int i = 0; i < lkcostLength; i++){ 
+                    if(this.costs[i][neighbor] == this.lkcost[i]){
+                        poisonedlkcost[i] = this.INFINITY;         
+                    } else {
+                        poisonedlkcost[i] = this.lkcost[i]; 
+                    }
+                }
+                System.out.println("Node " + this.nodename + " sending update to Node " + neighbor + " at " + NetworkSimulator.clocktime);
+                NetworkSimulator.tolayer2(new Packet(this.nodename, neighbor, poisonedlkcost));
             } 
         }
     }    
@@ -85,13 +95,12 @@ public class Node {
                     // find the shortest path to the node
                     if(this.costs[i][j] < minCost){
                         minCost = this.costs[i][j];
-                    }
-                    // if the shortest path has changed for that node, update the min cost array
-                    if(this.lkcost[i] != minCost){
-                        this.lkcost[i] = minCost;
-                        changed = true;
-
-                    }
+                    } 
+                }
+                // if the shortest path has changed for that node, update the min cost array
+                if(this.lkcost[i] != minCost){
+                    this.lkcost[i] = minCost;
+                    changed = true;
                 }
             } 
 
