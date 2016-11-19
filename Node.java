@@ -20,6 +20,7 @@ public class Node {
     /* Class constructor */
     public Node() { }
 
+    // sends min cost array to neighbors
     void tellTheNeighbors() {
         if(this.lkcost.length > 0 && this.neighbors.size() > 0){
             for(int neighbor : neighbors){
@@ -27,6 +28,7 @@ public class Node {
             } 
         }
     }    
+
     /* students to write the following two routines, and maybe some others */
     void rtinit(int nodename, int[] initial_lkcost) {
         
@@ -42,6 +44,7 @@ public class Node {
             Arrays.fill(row, this.INFINITY);
         }
 
+        // process the initial cost array into the distance table and min cost array
         for(int i = 0; i < size; i++){
             this.costs[nodename][i] = initial_lkcost[i];
             this.lkcost[i] = initial_lkcost[i];
@@ -50,51 +53,60 @@ public class Node {
             }
         }
         
+        // send min cost array to direct neighbors 
         tellTheNeighbors();        
 
-        System.out.println("Node " + this.nodename + "initialized at " + NetworkSimulator.clocktime);
+        System.out.println("Node " + this.nodename + " initialized at " + NetworkSimulator.clocktime);
         printdt();
         
     }    
 
     
     void rtupdate(Packet rcvdpkt) { 
-            if(rcvdpkt.destid == this.nodename){
+
+        if(rcvdpkt.destid == this.nodename){
                     
-                boolean changed = false;
-                int src = rcvdpkt.sourceid;  
-                int distToSrc = this.costs[this.nodename][src];
+            boolean changed = false;
+            int src = rcvdpkt.sourceid;  
 
-                // update distance table
-                for(int i = 0; i < rcvdpkt.mincost.length; i++){
-                    if(rcvdpkt.mincost[i] == this.INFINITY) {
-                        this.costs[src][i] = this.INFINITY;
-                    } else {
-                        this.costs[src][i] = rcvdpkt.mincost[i] + this.costs[this.nodename][i];
-                    }
+            // update distance table
+            for(int i = 0; i < rcvdpkt.mincost.length; i++){
+                if(rcvdpkt.mincost[i] == this.INFINITY) {
+                    this.costs[src][i] = this.INFINITY;
+                } else {
+                    this.costs[src][i] = rcvdpkt.mincost[i] + this.costs[this.nodename][i];
                 }
-
-                // update this node's min cost vector
-                for(int i = 0; i < this.lkcost.length; i++){
-                    for(int j = 0; j < this.lkcost.length; j++){
-                        if(this.costs[i][j] < this.lkcost[i]){
-                            this.lkcost[i] = this.costs[i][j];
-                            changed = true;
-                        }
-                    }
-                } 
-
-                System.out.println("Node " + this.nodename + "updated by Node " + src + "at " + NetworkSimulator.clocktime);
-                printdt();
-
-                // if the min cost vector has been changed, update the neighbors
-                if(changed){
-                    tellTheNeighbors();
-                }
-
-            } else {
-                System.out.println("received someone else's packet!");
             }
+
+            // update this node's min cost array
+            for(int i = 0; i < this.lkcost.length; i++){
+                int minCost = this.INFINITY;
+                for(int j = 0; j < this.lkcost.length; j++){
+                    // find the shortest path to the node
+                    if(this.costs[i][j] < minCost){
+                        minCost = this.costs[i][j];
+                    }
+                    // if the shortest path has changed for that node, update the min cost array
+                    if(this.lkcost[i] != minCost){
+                        this.lkcost[i] = minCost;
+                        changed = true;
+
+                    }
+                }
+            } 
+
+            System.out.println("Node " + this.nodename + " updated by Node " + src + " at " + NetworkSimulator.clocktime);
+            printdt();
+
+            // if the min cost array has been changed, update the neighbors
+            if(changed){
+                tellTheNeighbors();
+            }
+
+        } else {
+            System.out.println("received someone else's packet!");
+        }
+
     }
     
     
