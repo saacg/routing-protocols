@@ -9,7 +9,7 @@ public class NetworkSimulator {
     static final int LINK_CHANGE = 10;
     
     // link changes flag
-    private int LINKCHANGES = 0;
+    private int LINKCHANGES = 1;
     
     // Variables and data structures
     private static EventList eventList;

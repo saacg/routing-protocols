@@ -127,7 +127,42 @@ public class Node {
     
     
     /* called when cost from the node to linkid changes from current value to newcost*/
-    void linkhandler(int linkid, int newcost) {  }    
+    void linkhandler(int linkid, int newcost) { 
+   
+        this.costs[linkid][this.nodename] = newcost; 
+        this.costs[this.nodename][linkid] = newcost;
+        this.costs[linkid][linkid] = newcost;
+        
+        boolean changed = false;
+        // update this node's min cost array
+        for(int i = 0; i < this.lkcost.length; i++){
+            int minCost = this.INFINITY;
+            for(int j = 0; j < this.lkcost.length; j++){
+                // find the shortest path to the node
+                if(this.costs[i][j] < minCost){
+                    minCost = this.costs[i][j];
+                } 
+            }
+            // if the shortest path has changed for that node, update the min cost array
+            if(this.lkcost[i] != minCost){
+                this.lkcost[i] = minCost;
+                changed = true;
+            }
+        } 
+
+        System.out.println("Distance between Node " + this.nodename + " and Node " + linkid + " changed to " + newcost + " at " + NetworkSimulator.clocktime);
+        printdt();
+        printlkc();
+
+        // if the min cost array has been changed, update the neighbors
+        if(changed){
+            tellTheNeighbors();
+        }
+        else {
+            System.out.println("updated distance to Node " + linkid + " did not change state of Node " + this.nodename + "'s min cost array");
+        }
+    }    
+
 
 
     /* Prints the current costs to reaching other nodes in the network */
