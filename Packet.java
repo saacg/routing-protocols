@@ -1,5 +1,5 @@
 import java.io.*;
-
+import java.util.Arrays;
 /**
  * This is the packet that is sent from one routing update process to another
  * via the call tolayer2() in the network simulator entitled
@@ -15,7 +15,9 @@ public class Packet {
     
     // Min cost to router 0 ... 3
     public int[] mincost;
-    
+   
+    // paths of each min cost route 
+    public int[][] pathVector;
     /**
      * Class constructor with all attributes set
      */
@@ -36,6 +38,38 @@ public class Packet {
             this.mincost[1] = mincost[1];
             this.mincost[2] = mincost[2];
             this.mincost[3] = mincost[3];
+
+            this.pathVector = new int[4][4];
+            for (int[] row : this.pathVector){
+                Arrays.fill(row, -1);
+            }
+        }
+    }
+
+    public Packet(int sourceid, int destid, int[] mincost, int[][] pathVector) {
+        this.sourceid = sourceid;
+        this.destid = destid;
+        if (mincost.length != 4) {
+            System.out.printf("mincost array is invalid\n");
+            System.out.printf("Unable to construct new packet properly\n");
+            this.mincost = new int[4];
+            this.mincost[0] = -1;
+            this.mincost[1] = -1;
+            this.mincost[2] = -1;
+            this.mincost[3] = -1;
+        } else {
+            this.mincost = new int[4];
+            this.mincost[0] = mincost[0];
+            this.mincost[1] = mincost[1];
+            this.mincost[2] = mincost[2];
+            this.mincost[3] = mincost[3];
+
+            this.pathVector = new int[4][4];
+            for (int i = 0; i < 4; i++){
+                for(int j = 0; j < 4; j++){
+                    this.pathVector[i][j] = pathVector[i][j];
+                }    
+            }
         }
     }
 
@@ -51,6 +85,10 @@ public Packet() {
     this.mincost[1] = -1;
     this.mincost[2] = -1;
     this.mincost[3] = -1;
+    this.pathVector = new int[4][4];
+    for (int[] row : this.pathVector){
+        Arrays.fill(row, -1);
+    }
 }
 
 /**
@@ -76,6 +114,12 @@ public Packet(Packet p) {
             this.mincost[1] = p.mincost[1];
             this.mincost[2] = p.mincost[2];
             this.mincost[3] = p.mincost[3];
+            this.pathVector = new int[4][4];
+            for (int i = 0; i < 4; i++){
+                for(int j = 0; j < 4; j++){
+                    this.pathVector[i][j] = pathVector[i][j];
+                }    
+            }
         }
     }
 }
