@@ -120,10 +120,16 @@ public class Node {
                     }
                 } else {
                     this.costs[i][src] = rcvdpkt.mincost[i] + this.costs[src][this.nodename];
-                    this.paths[i][src][0] = src; //this.paths[src][this.nodename][0]; // because src will always be a neighbor, there will always be only one hop in this path
-                    for(int j = 1; j < rcvdpkt.mincost.length; j++){
-                       this.paths[i][src][j] = rcvdpkt.pathVector[i][j-1]; // add the path from this node to the neighbor to the path from the neighbor to node i
-                    }
+                    this.paths[i][src][0] = src;  // because src will always be a neighbor, there will always be only one hop in this path
+                    if(i == src){
+                        for(int j = 1; j < rcvdpkt.mincost.length; j++){
+                            this.paths[i][src][j] = -1;
+                        }           
+                    } else {
+                        for(int j = 1; j < rcvdpkt.mincost.length; j++){
+                            this.paths[i][src][j] = rcvdpkt.pathVector[i][j-1]; // add the path from this node to the neighbor to the path from the neighbor to node i
+                        }
+                    }   
                 }
             }
 
