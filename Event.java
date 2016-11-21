@@ -47,7 +47,7 @@ public class Event
         }        
         else
         {
-            packet = new Packet(p.sourceid, p.destid, p.mincost);
+            packet = new Packet(p.sourceid, p.destid, p.mincost, p.pathVector);
         }
         
         return true;

@@ -30,7 +30,7 @@ public class Node {
                 int[] poisonedlkcost = new int[lkcostLength];
                 int[][] poisonedmcpaths = new int[lkcostLength][lkcostLength];
                 for(int i = 0; i < lkcostLength; i++){ 
-                   // if(this.costs[i][neighbor] == this.lkcost[i] && i != this.nodename){
+                    //if(this.costs[i][neighbor] == this.lkcost[i] && i != this.nodename){
                     for(int j = 0; j < lkcostLength; j++){
                         if(this.minCostPaths[i][j] == neighbor && this.minCostPaths[i][j] != i){ 
                             poisonedlkcost[i] = this.INFINITY;         
@@ -105,12 +105,14 @@ public class Node {
             for(int i = 0; i < rcvdpkt.mincost.length; i++){
                 if(rcvdpkt.mincost[i] == this.INFINITY) {
                     this.costs[i][src] = this.INFINITY;
+                    this.costs[src][i] = this.INFINITY;
                     for(int j = 0; j < rcvdpkt.mincost.length; j++){
                         this.paths[i][src][j] = -1; 
+                        this.paths[src][i][j] = -1;
                     }
                 } else {
                     this.costs[i][src] = rcvdpkt.mincost[i] + this.costs[src][this.nodename];
-                    this.paths[i][src][0] = this.paths[src][this.nodename][0]; // because src will always be a neighbor, there will always be only one hop in this path
+                    this.paths[i][src][0] = src; //this.paths[src][this.nodename][0]; // because src will always be a neighbor, there will always be only one hop in this path
                     for(int j = 1; j < rcvdpkt.mincost.length; j++){
                        this.paths[i][src][j] = rcvdpkt.pathVector[i][j-1]; // add the path from this node to the neighbor to the path from the neighbor to node i
                     }
@@ -127,6 +129,7 @@ public class Node {
                         minCost = this.costs[i][j];
                         for(int k = 0; k < this.lkcost.length; k++){
                            newPath[k] = this.paths[i][j][k];  
+                           //System.out.println("k = " + k + ": " + newPath[k]);
                         }
                     } 
                 }
@@ -276,7 +279,7 @@ public class Node {
     void printmcp(){
         for(int i = 0; i < 4; i++){
             System.out.printf("Min cost path from Node " + this.nodename + " to Node " + i + ": "); 
-            for(int j = 0; i < 4; i++){
+            for(int j = 0; j < 4; j++){
                 if(this.minCostPaths[i][j] > -1){
                     System.out.printf(" " + this.minCostPaths[i][j]);
                 } else {

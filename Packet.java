@@ -117,7 +117,7 @@ public Packet(Packet p) {
             this.pathVector = new int[4][4];
             for (int i = 0; i < 4; i++){
                 for(int j = 0; j < 4; j++){
-                    this.pathVector[i][j] = pathVector[i][j];
+                    this.pathVector[i][j] = p.pathVector[i][j];
                 }    
             }
         }
