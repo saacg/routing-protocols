@@ -30,13 +30,21 @@ public class Node {
                 int[] poisonedlkcost = new int[lkcostLength];
                 int[][] poisonedmcpaths = new int[lkcostLength][lkcostLength];
                 for(int i = 0; i < lkcostLength; i++){ 
+                    boolean poisonpath = false;
                     //if(this.costs[i][neighbor] == this.lkcost[i] && i != this.nodename){
                     for(int j = 0; j < lkcostLength; j++){
                         if(this.minCostPaths[i][j] == neighbor && this.minCostPaths[i][j] != i){ 
-                            poisonedlkcost[i] = this.INFINITY;         
+                            poisonpath = true;
+                        }
+                    }
+                    if(poisonpath){
+                        poisonedlkcost[i] = this.INFINITY;         
+                        for(int j = 0; j < lkcostLength; j++){
                             poisonedmcpaths[i][j] = -1;
-                        } else {
-                            poisonedlkcost[i] = this.lkcost[i]; 
+                        }
+                    } else {
+                        poisonedlkcost[i] = this.lkcost[i]; 
+                        for(int j = 0; j < lkcostLength; j++){
                             poisonedmcpaths[i][j] = this.minCostPaths[i][j];
                         }
                     }
