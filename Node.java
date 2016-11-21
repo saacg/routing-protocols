@@ -55,10 +55,10 @@ public class Node {
         this.paths = new int[size][size][size];
         
         // initialize all distances in table to INFINITY
-        for(int[] row : this.costs){ 
-            Arrays.fill(row, this.INFINITY);
-        }
-
+        NetworkSimulator.fill2d(this.costs, this.INFINITY);
+        // initialize all paths to -1
+        NetworkSimulator.fill3d(this.paths, -1);
+        
         // process the initial cost array into the distance table and min cost array
         for(int i = 0; i < size; i++){
             this.costs[this.nodename][i] = initial_lkcost[i];
@@ -68,10 +68,19 @@ public class Node {
                 this.neighbors.add(i); 
             }
         }
+
+        for(int i  = 0; i < size; i++){
+            for(int j = 0; j < size; j++){
+                this.paths[this.nodename][i][j] = initial_lkpath[i][j];
+                this.paths[i][this.nodename][j] = initial_lkpath[i][j];
+                this.minCostPaths[i][j] = initial_lkpath[i][j];
+            }
+        }
         
         System.out.println("Node " + this.nodename + " initialized at " + NetworkSimulator.clocktime);
         printdt();
         printlkc();
+        printPaths();
         // send min cost array to direct neighbors 
         tellTheNeighbors();        
 
@@ -223,5 +232,22 @@ public class Node {
         }
         System.out.println("");
 
+    }
+
+    void printPaths() {
+
+        for(int i = 0; i < 4; i++){
+            for(int j = 0; j < 4; j++){
+                System.out.printf("Path from Node " + this.nodename + " to Node " + i + " through Node " + j + " :"); 
+                for(int k = 0; k < 4; k++){
+                    if(this.paths[i][j][k] > -1){
+                        System.out.printf(" " + this.paths[i][j][k]);
+                    } else {
+                        System.out.printf(" -");
+                    }
+                }
+                System.out.println("");
+            }
+        } 
     }
 }
