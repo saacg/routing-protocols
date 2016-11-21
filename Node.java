@@ -28,16 +28,22 @@ public class Node {
         if(lkcostLength > 0 && this.neighbors.size() > 0){
             for(int neighbor : neighbors){
                 int[] poisonedlkcost = new int[lkcostLength];
+                int[][] poisonedmcpaths = new int[lkcostLength][lkcostLength];
                 for(int i = 0; i < lkcostLength; i++){ 
-                    if(this.costs[i][neighbor] == this.lkcost[i] && i != this.nodename){
-                        poisonedlkcost[i] = this.INFINITY;         
-                    } else {
-                        poisonedlkcost[i] = this.lkcost[i]; 
+                   // if(this.costs[i][neighbor] == this.lkcost[i] && i != this.nodename){
+                    for(int j = 0; j < lkcostLength; j++){
+                        if(this.minCostPaths[i][j] == neighbor && this.minCostPaths[i][j] != i){ 
+                            poisonedlkcost[i] = this.INFINITY;         
+                            poisonedmcpaths[i][j] = -1;
+                        } else {
+                            poisonedlkcost[i] = this.lkcost[i]; 
+                            poisonedmcpaths[i][j] = this.minCostPaths[i][j];
+                        }
                     }
                 }
                 System.out.println("Node " + this.nodename + " sending update to Node " + neighbor + " at " + NetworkSimulator.clocktime);
                 printpsnd(poisonedlkcost, neighbor);
-                NetworkSimulator.tolayer2(new Packet(this.nodename, neighbor, poisonedlkcost));
+                NetworkSimulator.tolayer2(new Packet(this.nodename, neighbor, poisonedlkcost, poisonedmcpaths));
             } 
         }
     }    
