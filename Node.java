@@ -16,6 +16,8 @@ public class Node {
     int[][] costs;  		/*Define distance table*/
     int nodename;               /*Name of this node*/
     ArrayList<Integer> neighbors; /* list of direct neighbors to this node */
+    int[][] minCostPaths;
+    int[][][] paths;
      
     /* Class constructor */
     public Node() { }
@@ -41,7 +43,7 @@ public class Node {
     }    
 
     /* students to write the following two routines, and maybe some others */
-    void rtinit(int nodename, int[] initial_lkcost) {
+    void rtinit(int nodename, int[] initial_lkcost, int[][] initial_lkpath) {
         
         // initialize nodename and distance table 
         int size = initial_lkcost.length;
@@ -49,6 +51,8 @@ public class Node {
         this.costs = new int[size][size];
         this.lkcost = new int[size];
         this.neighbors = new ArrayList<Integer>();
+        this.minCostPaths = new int[size][size];
+        this.paths = new int[size][size][size];
         
         // initialize all distances in table to INFINITY
         for(int[] row : this.costs){ 

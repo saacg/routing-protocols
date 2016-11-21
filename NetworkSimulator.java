@@ -1,5 +1,6 @@
 import java.util.Vector;
 import java.util.Enumeration;
+import java.util.Arrays;
 import java.io.*;
 
 public class NetworkSimulator {
@@ -73,22 +74,34 @@ public class NetworkSimulator {
         // Initialize router 0
         int[] initialCosts0 = new int[4];
         initialCosts0[0] = 0; initialCosts0[1] = 1; initialCosts0[2] = 1; initialCosts0[3] = n0.INFINITY;
-        n0.rtinit(0,initialCosts0);
+        int[][] initialPaths0 = new int[4][4];
+        fill2d(initialPaths0, -1);
+        initialPaths0[0][0] = 0; initialPaths0[1][0] = 1; initialPaths0[2][0] = 2;
+        n0.rtinit(0,initialCosts0, initialPaths0);
         
         // Initialize router 1
         int[] initialCosts1 = new int[4];
         initialCosts1[0] = 1; initialCosts1[1] = 0; initialCosts1[2] = 10; initialCosts1[3] = 7;
-        n1.rtinit(1,initialCosts1);
+        int[][] initialPaths1 = new int[4][4];
+        fill2d(initialPaths1, -1);
+        initialPaths1[0][0] = 0; initialPaths1[1][0] = 1; initialPaths1[2][0] = 2; initialPaths1[3][0] = 3;
+        n1.rtinit(1,initialCosts1, initialPaths1);
         
         // Initialize router 2
         int[] initialCosts2 = new int[4];
         initialCosts2[0] = 1; initialCosts2[1] = 10; initialCosts2[2] = 0; initialCosts2[3] = 2;
-        n2.rtinit(2,initialCosts2);
-        
+        int[][] initialPaths2 = new int[4][4];
+        fill2d(initialPaths2, -1);
+        initialPaths2[0][0] = 0; initialPaths2[1][0] = 1; initialPaths2[2][0] = 2; initialPaths2[3][0] = 3;
+        n2.rtinit(2,initialCosts2, initialPaths2);
+       
         // Initialize router 3
         int[] initialCosts3 = new int[4];
         initialCosts3[0] = n3.INFINITY; initialCosts3[1] = 7; initialCosts3[2] = 2; initialCosts3[3] = 0;
-        n3.rtinit(3,initialCosts3);
+        int[][] initialPaths3 = new int[4][4];
+        fill2d(initialPaths3, -1);
+        initialPaths3[1][0] = 1; initialPaths3[2][0] = 2; initialPaths3[3][0] = 3; 
+        n3.rtinit(3,initialCosts3, initialPaths3);
         
         /***************************
          * Initialize connection costs between routers
@@ -178,7 +191,23 @@ public class NetworkSimulator {
         }
         System.out.println("Simulator terminated at time " + getTime());
     }
-    
+
+    // helper functions that fill 2d and 3d arrays with a passed-in value
+    public static int[][] fill2d(int[][] fillArray, int filler){
+        for(int[] row : fillArray){
+            Arrays.fill(row, filler); 
+        }
+        return fillArray;
+    }
+
+    public static int[][][] fill3d(int[][][] fillArray, int filler){
+        for(int[][] array2d : fillArray){
+            for(int[] row : array2d){ 
+                Arrays.fill(row, filler); 
+            }
+        }
+        return fillArray;
+    }
     
     /************************** TOLAYER2 ***************/
     public static void tolayer2(Packet packet) {
