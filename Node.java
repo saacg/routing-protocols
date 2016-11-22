@@ -33,7 +33,7 @@ public class Node {
                     boolean poisonpath = false;
                     //if(this.costs[i][neighbor] == this.lkcost[i] && i != this.nodename){
                     for(int j = 0; j < lkcostLength; j++){
-                        if(this.minCostPaths[i][j] == neighbor && this.minCostPaths[i][j] != i){ 
+                        if(this.minCostPaths[i][j] == neighbor && this.minCostPaths[i][j] != i && i != this.nodename){ 
                             poisonpath = true;
                         }
                     }
@@ -184,20 +184,53 @@ public class Node {
         this.costs[linkid][this.nodename] = newcost; 
         this.costs[this.nodename][linkid] = newcost;
         this.costs[linkid][linkid] = newcost;
-        
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            // update distance table
+            for(int i = 0; i < rcvdpkt.mincost.length; i++){
+                if(rcvdpkt.mincost[i] == this.INFINITY) {
+                    this.costs[i][src] = this.INFINITY;
+                    this.costs[src][i] = this.INFINITY;
+                    for(int j = 0; j < rcvdpkt.mincost.length; j++){
+                        this.paths[i][src][j] = -1; 
+                        this.paths[src][i][j] = -1;
+                    }
+                } else {
+                    this.costs[i][src] = rcvdpkt.mincost[i] + this.costs[src][this.nodename];
+                    this.paths[i][src][0] = src;  // because src will always be a neighbor, there will always be only one hop in this path
+                    if(i == src){
+                        for(int j = 1; j < rcvdpkt.mincost.length; j++){
+                            this.paths[i][src][j] = -1;
+                        }           
+                    } else {
+                        for(int j = 1; j < rcvdpkt.mincost.length; j++){
+                            this.paths[i][src][j] = rcvdpkt.pathVector[i][j-1]; // add the path from this node to the neighbor to the path from the neighbor to node i
+                        }
+                    }   
+                }
+            }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////        
         boolean changed = false;
         // update this node's min cost array
         for(int i = 0; i < this.lkcost.length; i++){
             int minCost = this.INFINITY;
+            int[] newPath = new int[this.lkcost.length];
             for(int j = 0; j < this.lkcost.length; j++){
                 // find the shortest path to the node
                 if(this.costs[i][j] < minCost){
                     minCost = this.costs[i][j];
+                    for(int k = 0; k < this.lkcost.length; k++){
+                       newPath[k] = this.paths[i][j][k];  
+                    }
                 } 
             }
             // if the shortest path has changed for that node, update the min cost array
             if(this.lkcost[i] != minCost){
                 this.lkcost[i] = minCost;
+                for(int l = 0; l < this.lkcost.length; l++){
+                    this.minCostPaths[i][l] = newPath[l]; 
+                }
                 changed = true;
             }
         } 
@@ -205,6 +238,8 @@ public class Node {
         System.out.println("Distance between Node " + this.nodename + " and Node " + linkid + " changed to " + newcost + " at " + NetworkSimulator.clocktime);
         printdt();
         printlkc();
+        printPaths();
+        printmcp();
 
         // if the min cost array has been changed, update the neighbors
         if(changed){
