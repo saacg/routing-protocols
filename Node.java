@@ -22,7 +22,7 @@ public class Node {
     /* Class constructor */
     public Node() { }
 
-    // sends min cost array to neighbors
+    // sends min cost array and min path vector to neighbors
     void tellTheNeighbors() {
         int lkcostLength = this.lkcost.length;
         if(lkcostLength > 0 && this.neighbors.size() > 0){
@@ -31,8 +31,8 @@ public class Node {
                 int[][] poisonedmcpaths = new int[lkcostLength][lkcostLength];
                 for(int i = 0; i < lkcostLength; i++){ 
                     boolean poisonpath = false;
-                    //if(this.costs[i][neighbor] == this.lkcost[i] && i != this.nodename){
                     for(int j = 0; j < lkcostLength; j++){
+                        // if there is a neighbor anywhere on the shortest path poison them by setting the distance as infinity as remove the path
                         if(this.minCostPaths[i][j] == neighbor && this.minCostPaths[i][j] != i && i != this.nodename){ 
                             poisonpath = true;
                         }
@@ -59,16 +59,16 @@ public class Node {
     /* students to write the following two routines, and maybe some others */
     void rtinit(int nodename, int[] initial_lkcost, int[][] initial_lkpath) {
         
-        // initialize nodename and distance table 
+        // initialize member variables 
         int size = initial_lkcost.length;
         this.nodename = nodename; 
         this.costs = new int[size][size];
         this.lkcost = new int[size];
-        this.neighbors = new ArrayList<Integer>();
+        this.neighbors = new ArrayList<Integer>(); // list of direct neighbors (all nodes 1 hop away from this node)
         this.minCostPaths = new int[size][size];
         this.paths = new int[size][size][size];
         
-        // initialize all distances in table to INFINITY
+        // initialize all distances in table to INFINITY - added the helper functions below to Network Simulator so I wouldn't have to keep writing them 
         NetworkSimulator.fill2d(this.costs, this.INFINITY);
         // initialize all paths to -1
         NetworkSimulator.fill3d(this.paths, -1);
@@ -83,6 +83,7 @@ public class Node {
             }
         }
 
+        // process initial (1 hop) paths into path arrays
         for(int i  = 0; i < size; i++){
             for(int j = 0; j < size; j++){
                 this.paths[this.nodename][i][j] = initial_lkpath[i][j];
@@ -109,7 +110,7 @@ public class Node {
             boolean changed = false;
             int src = rcvdpkt.sourceid;  
 
-            // update distance table
+            // update distance table and path table
             for(int i = 0; i < rcvdpkt.mincost.length; i++){
                 if(rcvdpkt.mincost[i] == this.INFINITY) {
                     this.costs[i][src] = this.INFINITY;
@@ -143,11 +144,10 @@ public class Node {
                         minCost = this.costs[i][j];
                         for(int k = 0; k < this.lkcost.length; k++){
                            newPath[k] = this.paths[i][j][k];  
-                           //System.out.println("k = " + k + ": " + newPath[k]);
                         }
                     } 
                 }
-                // if the shortest path has changed for that node, update the min cost array
+                // if the shortest path has changed for that node, update the min cost array and the minimum path array
                 if(this.lkcost[i] != minCost){
                     this.lkcost[i] = minCost;
                     for(int l = 0; l < this.lkcost.length; l++){
@@ -184,35 +184,10 @@ public class Node {
         this.costs[linkid][this.nodename] = newcost; 
         this.costs[this.nodename][linkid] = newcost;
         this.costs[linkid][linkid] = newcost;
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-            // update distance table
-            for(int i = 0; i < rcvdpkt.mincost.length; i++){
-                if(rcvdpkt.mincost[i] == this.INFINITY) {
-                    this.costs[i][src] = this.INFINITY;
-                    this.costs[src][i] = this.INFINITY;
-                    for(int j = 0; j < rcvdpkt.mincost.length; j++){
-                        this.paths[i][src][j] = -1; 
-                        this.paths[src][i][j] = -1;
-                    }
-                } else {
-                    this.costs[i][src] = rcvdpkt.mincost[i] + this.costs[src][this.nodename];
-                    this.paths[i][src][0] = src;  // because src will always be a neighbor, there will always be only one hop in this path
-                    if(i == src){
-                        for(int j = 1; j < rcvdpkt.mincost.length; j++){
-                            this.paths[i][src][j] = -1;
-                        }           
-                    } else {
-                        for(int j = 1; j < rcvdpkt.mincost.length; j++){
-                            this.paths[i][src][j] = rcvdpkt.pathVector[i][j-1]; // add the path from this node to the neighbor to the path from the neighbor to node i
-                        }
-                    }   
-                }
-            }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////        
         boolean changed = false;
-        // update this node's min cost array
+
+        
+        // update this node's min cost array and path vectors
         for(int i = 0; i < this.lkcost.length; i++){
             int minCost = this.INFINITY;
             int[] newPath = new int[this.lkcost.length];
@@ -225,7 +200,7 @@ public class Node {
                     }
                 } 
             }
-            // if the shortest path has changed for that node, update the min cost array
+            // if the shortest path has changed for that node, update the min cost array and min cost paths
             if(this.lkcost[i] != minCost){
                 this.lkcost[i] = minCost;
                 for(int l = 0; l < this.lkcost.length; l++){
@@ -291,6 +266,7 @@ public class Node {
         }
     }
 
+    // print minimum cost array
     void printlkc(){
         System.out.printf("min cost array for Node " + this.nodename + ": "); 
         for(int mincost : lkcost){
@@ -298,7 +274,8 @@ public class Node {
         }
         System.out.println("");
     }
-
+    
+    // print poisoned array 
     void printpsnd(int[] psnArray, int dest){
         System.out.printf("min cost array  for Node " + this.nodename + " sent to Node " + dest + " after poisoning: "); 
         for(int mincost : psnArray){
@@ -307,35 +284,41 @@ public class Node {
         System.out.println("");
 
     }
-
+   
+    // print out all of the paths stored in the paths table
     void printPaths() {
 
         for(int i = 0; i < 4; i++){
             for(int j = 0; j < 4; j++){
-                System.out.printf("Path from Node " + this.nodename + " to Node " + i + " through Node " + j + ":"); 
-                for(int k = 0; k < 4; k++){
-                    if(this.paths[i][j][k] > -1){
-                        System.out.printf(" " + this.paths[i][j][k]);
+                if(this.nodename != i && this.nodename != j){
+                    System.out.printf("Path from Node " + this.nodename + " to Node " + i + " through Node " + j + ":"); 
+                    for(int k = 0; k < 4; k++){
+                        if(this.paths[i][j][k] > -1){
+                            System.out.printf(" " + this.paths[i][j][k]);
+                        } else {
+                            System.out.printf(" -");
+                        }
+                    }
+                    System.out.println("");
+                }
+            }
+        } 
+    }
+
+    // print out the minimum cost paths for this node 
+    void printmcp(){
+        for(int i = 0; i < 4; i++){
+            if(this.nodename != i){
+                System.out.printf("Min cost path from Node " + this.nodename + " to Node " + i + ": "); 
+                for(int j = 0; j < 4; j++){
+                    if(this.minCostPaths[i][j] > -1){
+                        System.out.printf(" " + this.minCostPaths[i][j]);
                     } else {
                         System.out.printf(" -");
                     }
                 }
                 System.out.println("");
             }
-        } 
-    }
-
-    void printmcp(){
-        for(int i = 0; i < 4; i++){
-            System.out.printf("Min cost path from Node " + this.nodename + " to Node " + i + ": "); 
-            for(int j = 0; j < 4; j++){
-                if(this.minCostPaths[i][j] > -1){
-                    System.out.printf(" " + this.minCostPaths[i][j]);
-                } else {
-                    System.out.printf(" -");
-                }
-            }
-            System.out.println("");
         }
     }
 }

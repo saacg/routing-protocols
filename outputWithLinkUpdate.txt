@@ -7,19 +7,12 @@ Enter trace level (>= 0): [0] Enter seed (>= 0): [3322] Node 0 initialized at 0.
 dest 2|  9999   9999 
      3|  9999   9999 
 min cost array for Node 0: 0 1 1 9999 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 - - -
-Path from Node 0 to Node 0 through Node 2: 2 - - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: - - - -
 Path from Node 0 to Node 1 through Node 2: - - - -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: - - - -
 Path from Node 0 to Node 2 through Node 2: - - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: - - - -
 Path from Node 0 to Node 3 through Node 2: - - - -
 Path from Node 0 to Node 3 through Node 3: - - - -
@@ -36,19 +29,12 @@ dest 2|  9999   9999   9999
      3|  9999   9999   9999
 min cost array for Node 1: 1 0 10 7 
 Path from Node 1 to Node 0 through Node 0: - - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: - - - -
 Path from Node 1 to Node 0 through Node 3: - - - -
-Path from Node 1 to Node 1 through Node 0: 0 - - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 - - -
-Path from Node 1 to Node 1 through Node 3: 3 - - -
 Path from Node 1 to Node 2 through Node 0: - - - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: - - - -
 Path from Node 1 to Node 2 through Node 3: - - - -
 Path from Node 1 to Node 3 through Node 0: - - - -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: - - - -
 Path from Node 1 to Node 3 through Node 3: - - - -
 Node 1 sending update to Node 0 at 0.0
@@ -67,19 +53,12 @@ dest 1|  9999   9999   9999
 min cost array for Node 2: 1 10 0 2 
 Path from Node 2 to Node 0 through Node 0: - - - -
 Path from Node 2 to Node 0 through Node 1: - - - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: - - - -
 Path from Node 2 to Node 1 through Node 1: - - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: - - - -
-Path from Node 2 to Node 2 through Node 0: 0 - - -
-Path from Node 2 to Node 2 through Node 1: 1 - - -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 - - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: - - - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: - - - -
 Node 2 sending update to Node 0 at 0.0
 min cost array  for Node 2 sent to Node 0 after poisoning: 1 10 0 2 
@@ -98,19 +77,12 @@ min cost array for Node 3: 9999 7 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: - - - -
 Path from Node 3 to Node 0 through Node 2: - - - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: - - - -
 Path from Node 3 to Node 1 through Node 2: - - - -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: - - - -
 Path from Node 3 to Node 2 through Node 2: - - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 - - -
-Path from Node 3 to Node 3 through Node 2: 2 - - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Node 3 sending update to Node 1 at 0.0
 min cost array  for Node 3 sent to Node 1 after poisoning: 9999 7 2 0 
 Node 3 sending update to Node 2 at 0.0
@@ -126,23 +98,15 @@ dest 1|    2   9999   9999
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: - - - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: - - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: - - - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 - - -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 - - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: - - - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: - - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 Node 2 sending update to Node 0 at 0.09198278756065553
 min cost array  for Node 2 sent to Node 0 after poisoning: 1 9999 0 2 
@@ -159,23 +123,15 @@ Node 0 updated by Node 1 at 0.10388500625629445
 dest 2|   11   9999 
      3|    8   9999 
 min cost array for Node 0: 0 1 1 8 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 0 - -
-Path from Node 0 to Node 0 through Node 2: 2 - - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: - - - -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: 1 2 - -
 Path from Node 0 to Node 2 through Node 2: - - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: 1 3 - -
 Path from Node 0 to Node 3 through Node 2: - - - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  1 - - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  1 3 - -
@@ -193,23 +149,15 @@ dest 2|    2   9999   9999
      3|  9999   9999   9999
 min cost array for Node 1: 1 0 2 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: - - - -
 Path from Node 1 to Node 0 through Node 3: - - - -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 - - -
-Path from Node 1 to Node 1 through Node 3: 3 - - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: - - - -
 Path from Node 1 to Node 2 through Node 3: - - - -
 Path from Node 1 to Node 3 through Node 0: - - - -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: - - - -
 Path from Node 1 to Node 3 through Node 3: - - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 Node 1 sending update to Node 0 at 0.11456648457289346
@@ -229,23 +177,15 @@ dest 1|    2    10   9999
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: - - - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 2 - -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 - - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: - - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 1 did not change state of Node 2's min cost array
 MAIN: rcv event, t=0.884, at 3 src: 1, dest: 3, contents:   1   0  10   7
@@ -260,23 +200,15 @@ min cost array for Node 3: 8 7 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: 1 0 - -
 Path from Node 3 to Node 0 through Node 2: - - - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: 1 - - -
 Path from Node 3 to Node 1 through Node 2: - - - -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: 1 2 - -
 Path from Node 3 to Node 2 through Node 2: - - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 3 - -
-Path from Node 3 to Node 3 through Node 2: 2 - - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 3 to Node 0:  1 0 - -
 Min cost path from Node 3 to Node 1:  1 - - -
 Min cost path from Node 3 to Node 2:  2 - - -
-Min cost path from Node 3 to Node 3:  3 - - -
 Node 3 sending update to Node 1 at 0.8836329233680227
 min cost array  for Node 3 sent to Node 1 after poisoning: 9999 7 2 0 
 Node 3 sending update to Node 2 at 0.8836329233680227
@@ -291,23 +223,15 @@ dest 2|    2    10   9999
      3|  9999    12   9999
 min cost array for Node 1: 1 0 2 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: - - - -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 1 - -
-Path from Node 1 to Node 1 through Node 3: 3 - - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: - - - -
 Path from Node 1 to Node 3 through Node 0: - - - -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: - - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 update by Node 2 did not change state of Node 1's min cost array
@@ -321,23 +245,15 @@ dest 2|    2    10     9
      3|  9999    12     7
 min cost array for Node 1: 1 0 2 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: - - - -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 1 - -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: - - - -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 update by Node 3 did not change state of Node 1's min cost array
@@ -353,23 +269,15 @@ min cost array for Node 3: 3 7 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: 1 0 - -
 Path from Node 3 to Node 0 through Node 2: 2 0 - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: 1 - - -
 Path from Node 3 to Node 1 through Node 2: 2 1 - -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: 1 2 - -
 Path from Node 3 to Node 2 through Node 2: 2 - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 3 - -
-Path from Node 3 to Node 3 through Node 2: 2 3 - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 3 to Node 0:  2 0 - -
 Min cost path from Node 3 to Node 1:  1 - - -
 Min cost path from Node 3 to Node 2:  2 - - -
-Min cost path from Node 3 to Node 3:  3 - - -
 Node 3 sending update to Node 1 at 1.6687520981475266
 min cost array  for Node 3 sent to Node 1 after poisoning: 3 7 2 0 
 Node 3 sending update to Node 2 at 1.6687520981475266
@@ -383,23 +291,15 @@ Node 0 updated by Node 2 at 2.032410657063509
 dest 2|   11     1 
      3|    8     3 
 min cost array for Node 0: 0 1 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 0 - -
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: 2 1 - -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: 1 2 - -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: 1 3 - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  1 - - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -416,23 +316,15 @@ Node 0 updated by Node 2 at 2.1378215887936034
 dest 2|  9999     1 
      3|    8     3 
 min cost array for Node 0: 0 1 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 0 - -
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: - - - -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: - - - -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: 1 3 - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  1 - - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -448,23 +340,15 @@ dest 1|    2    10     9
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: 3 1 - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 2 - -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 3 did not change state of Node 2's min cost array
 MAIN: rcv event, t=2.351, at 3 src: 2, dest: 3, contents:   1   2   0   2
@@ -479,23 +363,15 @@ min cost array for Node 3: 3 4 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: 1 0 - -
 Path from Node 3 to Node 0 through Node 2: 2 0 - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: 1 - - -
 Path from Node 3 to Node 1 through Node 2: 2 0 1 -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: 1 2 - -
 Path from Node 3 to Node 2 through Node 2: 2 - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 3 - -
-Path from Node 3 to Node 3 through Node 2: 2 3 - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 3 to Node 0:  2 0 - -
 Min cost path from Node 3 to Node 1:  2 0 1 -
 Min cost path from Node 3 to Node 2:  2 - - -
-Min cost path from Node 3 to Node 3:  3 - - -
 Node 3 sending update to Node 1 at 2.351268044068728
 min cost array  for Node 3 sent to Node 1 after poisoning: 3 4 2 0 
 Node 3 sending update to Node 2 at 2.351268044068728
@@ -509,23 +385,15 @@ Node 0 updated by Node 1 at 2.434034241767632
 dest 2|  9999     1 
      3|    8     3 
 min cost array for Node 0: 0 1 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 0 - -
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: - - - -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: - - - -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: 1 3 - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  1 - - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -540,23 +408,15 @@ dest 2|    2    10     9
      3|  9999    12     7
 min cost array for Node 1: 1 0 2 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: - - - -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 0 1 -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: - - - -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 update by Node 2 did not change state of Node 1's min cost array
@@ -571,23 +431,15 @@ dest 1|    2    10     9
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: 3 1 - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 2 - -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: 0 1 3 -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 0 did not change state of Node 2's min cost array
 MAIN: rcv event, t=4.080, at 2 src: 1, dest: 2, contents:   1   0   2   7
@@ -601,23 +453,15 @@ dest 1|    2    10     9
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: 3 1 - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 0 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: 0 1 3 -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 1 did not change state of Node 2's min cost array
 MAIN: rcv event, t=4.085, at 1 src: 0, dest: 1, contents:   0   1   1 9999
@@ -630,23 +474,15 @@ dest 2|    2    10     9
      3|  9999    12     7
 min cost array for Node 1: 1 0 2 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: - - - -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 0 1 -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: - - - -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 update by Node 0 did not change state of Node 1's min cost array
@@ -662,23 +498,15 @@ min cost array for Node 3: 3 4 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: 1 0 - -
 Path from Node 3 to Node 0 through Node 2: 2 0 - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: 1 - - -
 Path from Node 3 to Node 1 through Node 2: 2 0 1 -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: 1 0 2 -
 Path from Node 3 to Node 2 through Node 2: 2 - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 3 - -
-Path from Node 3 to Node 3 through Node 2: 2 3 - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 3 to Node 0:  2 0 - -
 Min cost path from Node 3 to Node 1:  2 0 1 -
 Min cost path from Node 3 to Node 2:  2 - - -
-Min cost path from Node 3 to Node 3:  3 - - -
 update by Node 1 did not change state of Node 3's min cost array
 MAIN: rcv event, t=5.360, at 1 src: 3, dest: 1, contents: 9999   7   2   0
 Node 1 updated by Node 3 at 5.360087893307291
@@ -690,23 +518,15 @@ dest 2|    2    10     9
      3|  9999    12     7
 min cost array for Node 1: 1 0 2 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: - - - -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 0 1 -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: - - - -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 update by Node 3 did not change state of Node 1's min cost array
@@ -721,23 +541,15 @@ dest 1|    2    10     9
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: 3 1 0 -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: 3 1 - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 0 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: 0 1 3 -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 3 did not change state of Node 2's min cost array
 MAIN: rcv event, t=6.525, at 1 src: 3, dest: 1, contents:   3   7   2   0
@@ -750,23 +562,15 @@ dest 2|    2    10     9
      3|  9999    12     7
 min cost array for Node 1: 1 0 2 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 0 1 -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: - - - -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 update by Node 3 did not change state of Node 1's min cost array
@@ -781,23 +585,15 @@ dest 1|    2    10     9
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: 3 1 - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 0 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 3 did not change state of Node 2's min cost array
 MAIN: rcv event, t=6.968, at 1 src: 0, dest: 1, contents:   0   1   1   3
@@ -810,23 +606,15 @@ dest 2|    2    10     9
      3|    4    12     7
 min cost array for Node 1: 1 0 2 4 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 0 1 -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  0 2 3 -
 Node 1 sending update to Node 0 at 6.967986083559679
@@ -844,23 +632,15 @@ Node 0 updated by Node 1 at 7.523911252174444
 dest 2|  9999     1 
      3|  9999     3 
 min cost array for Node 0: 0 1 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 0 - -
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: - - - -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: - - - -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: - - - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  1 - - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -875,23 +655,15 @@ dest 2|    2    10     9
      3|    4    12     7
 min cost array for Node 1: 1 0 2 4 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 0 1 -
-Path from Node 1 to Node 1 through Node 3: 3 2 0 1
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  0 2 3 -
 update by Node 3 did not change state of Node 1's min cost array
@@ -907,23 +679,15 @@ min cost array for Node 3: 3 4 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: 1 0 - -
 Path from Node 3 to Node 0 through Node 2: 2 0 - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: 1 - - -
 Path from Node 3 to Node 1 through Node 2: 2 0 1 -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: 1 0 2 -
 Path from Node 3 to Node 2 through Node 2: 2 - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 0 2 3
-Path from Node 3 to Node 3 through Node 2: 2 3 - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 3 to Node 0:  2 0 - -
 Min cost path from Node 3 to Node 1:  2 0 1 -
 Min cost path from Node 3 to Node 2:  2 - - -
-Min cost path from Node 3 to Node 3:  3 - - -
 update by Node 1 did not change state of Node 3's min cost array
 MAIN: rcv event, t=8.147, at 2 src: 0, dest: 2, contents:   0   1   1 9999
 Node 2 updated by Node 0 at 8.147099215674308
@@ -936,23 +700,15 @@ dest 1|    2    10     9
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: 3 1 - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 0 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 0 did not change state of Node 2's min cost array
 MAIN: rcv event, t=8.692, at 2 src: 3, dest: 2, contents: 9999 9999   2   0
@@ -966,23 +722,15 @@ dest 1|    2    10   9999
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: - - - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 0 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: - - - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 3 did not change state of Node 2's min cost array
 MAIN: rcv event, t=8.757, at 2 src: 1, dest: 2, contents:   1   0   2 9999
@@ -996,23 +744,15 @@ dest 1|    2    10   9999
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: - - - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 0 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: - - - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 1 did not change state of Node 2's min cost array
 MAIN: rcv event, t=10000.000, at -1Distance between Node 0 and Node 1 changed to 20 at 10000.0
@@ -1023,23 +763,15 @@ MAIN: rcv event, t=10000.000, at -1Distance between Node 0 and Node 1 changed to
 dest 2|  9999     1 
      3|  9999     3 
 min cost array for Node 0: 0 20 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 0 - -
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: - - - -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: - - - -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: - - - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  1 - - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -1056,23 +788,15 @@ dest 2|    2    10     9
      3|    4    12     7
 min cost array for Node 1: 10 0 2 4 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 0 1 -
-Path from Node 1 to Node 1 through Node 3: 3 2 0 1
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  3 2 0 -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  0 2 3 -
 Node 1 sending update to Node 0 at 10000.0
@@ -1091,23 +815,15 @@ dest 2|   21    10     9
      3|   23    12     7
 min cost array for Node 1: 10 0 9 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 0 1 -
-Path from Node 1 to Node 1 through Node 3: 3 2 0 1
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  3 2 0 -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  3 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 Node 1 sending update to Node 0 at 10000.619220557268
@@ -1127,23 +843,15 @@ dest 1|   21    10   9999
 min cost array for Node 2: 1 10 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: - - - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 0 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: - - - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  1 - - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 Node 2 sending update to Node 0 at 10000.72280037843
 min cost array  for Node 2 sent to Node 0 after poisoning: 1 10 0 2 
@@ -1163,23 +871,15 @@ min cost array for Node 3: 3 4 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: - - - -
 Path from Node 3 to Node 0 through Node 2: 2 0 - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: 1 - - -
 Path from Node 3 to Node 1 through Node 2: 2 0 1 -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: 1 0 2 -
 Path from Node 3 to Node 2 through Node 2: 2 - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 0 2 3
-Path from Node 3 to Node 3 through Node 2: 2 3 - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 3 to Node 0:  2 0 - -
 Min cost path from Node 3 to Node 1:  2 0 1 -
 Min cost path from Node 3 to Node 2:  2 - - -
-Min cost path from Node 3 to Node 3:  3 - - -
 update by Node 1 did not change state of Node 3's min cost array
 MAIN: rcv event, t=10001.442, at 3 src: 1, dest: 3, contents: 9999   0 9999   7
 Node 3 updated by Node 1 at 10001.441877498703
@@ -1193,23 +893,15 @@ min cost array for Node 3: 3 7 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: - - - -
 Path from Node 3 to Node 0 through Node 2: 2 0 - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: 1 - - -
 Path from Node 3 to Node 1 through Node 2: - - - -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: - - - -
 Path from Node 3 to Node 2 through Node 2: 2 - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 3 - -
-Path from Node 3 to Node 3 through Node 2: 2 3 - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 3 to Node 0:  2 0 - -
 Min cost path from Node 3 to Node 1:  1 - - -
 Min cost path from Node 3 to Node 2:  2 - - -
-Min cost path from Node 3 to Node 3:  3 - - -
 Node 3 sending update to Node 1 at 10001.441877498703
 min cost array  for Node 3 sent to Node 1 after poisoning: 3 7 2 0 
 Node 3 sending update to Node 2 at 10001.441877498703
@@ -1223,23 +915,15 @@ Node 0 updated by Node 1 at 10001.87707144383
 dest 2|  9999     1 
      3|  9999     3 
 min cost array for Node 0: 0 20 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 3 2 0
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: - - - -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: - - - -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: - - - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  1 - - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -1254,23 +938,15 @@ dest 2|   21    10     9
      3|   23    12     7
 min cost array for Node 1: 10 0 9 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 1 - -
-Path from Node 1 to Node 1 through Node 3: 3 2 0 1
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  3 2 0 -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  3 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 update by Node 2 did not change state of Node 1's min cost array
@@ -1285,23 +961,15 @@ dest 1|  9999    10   9999
 min cost array for Node 2: 1 10 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: - - - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: - - - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: - - - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 0 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: - - - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  1 - - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 1 did not change state of Node 2's min cost array
 MAIN: rcv event, t=10002.305, at 2 src: 1, dest: 2, contents: 9999   0   9   7
@@ -1315,23 +983,15 @@ dest 1|  9999    10   9999
 min cost array for Node 2: 1 10 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: - - - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: - - - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: - - - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 3 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  1 - - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 1 did not change state of Node 2's min cost array
 MAIN: rcv event, t=10002.518, at 2 src: 3, dest: 2, contents: 9999   7   2   0
@@ -1345,23 +1005,15 @@ dest 1|  9999    10     9
 min cost array for Node 2: 1 9 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: - - - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: - - - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: 3 1 - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 3 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  3 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 Node 2 sending update to Node 0 at 10002.517960142826
 min cost array  for Node 2 sent to Node 0 after poisoning: 1 9 0 2 
@@ -1378,23 +1030,15 @@ Node 0 updated by Node 1 at 10002.76302377392
 dest 2|   29     1 
      3|   27     3 
 min cost array for Node 0: 0 20 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 3 2 0
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: - - - -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: 1 3 2 -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: 1 3 - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  1 - - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -1411,23 +1055,15 @@ min cost array for Node 3: 3 7 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: - - - -
 Path from Node 3 to Node 0 through Node 2: 2 0 - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: 1 - - -
 Path from Node 3 to Node 1 through Node 2: 2 1 - -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: - - - -
 Path from Node 3 to Node 2 through Node 2: 2 - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 3 - -
-Path from Node 3 to Node 3 through Node 2: 2 3 - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 3 to Node 0:  2 0 - -
 Min cost path from Node 3 to Node 1:  1 - - -
 Min cost path from Node 3 to Node 2:  2 - - -
-Min cost path from Node 3 to Node 3:  3 - - -
 update by Node 2 did not change state of Node 3's min cost array
 MAIN: rcv event, t=10003.734, at 0 src: 2, dest: 0, contents:   1  10   0   2
 Node 0 updated by Node 2 at 10003.73442793054
@@ -1438,23 +1074,15 @@ Node 0 updated by Node 2 at 10003.73442793054
 dest 2|   29     1 
      3|   27     3 
 min cost array for Node 0: 0 11 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 3 2 0
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: 2 1 - -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: 1 3 2 -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: 1 3 - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  2 1 - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -1473,23 +1101,15 @@ dest 1|  9999    10     9
 min cost array for Node 2: 1 9 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: - - - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: - - - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: 3 1 - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 3 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  3 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 0 did not change state of Node 2's min cost array
 MAIN: rcv event, t=10004.101, at 1 src: 3, dest: 1, contents:   3   7   2   0
@@ -1502,23 +1122,15 @@ dest 2|   21    10     9
      3|   23    12     7
 min cost array for Node 1: 10 0 9 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 1 - -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  3 2 0 -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  3 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 update by Node 3 did not change state of Node 1's min cost array
@@ -1531,23 +1143,15 @@ Node 0 updated by Node 2 at 10004.73207800531
 dest 2|   29     1 
      3|   27     3 
 min cost array for Node 0: 0 10 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 3 2 0
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: 2 3 1 -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: 1 3 2 -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: 1 3 - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  2 3 1 -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -1566,23 +1170,15 @@ dest 1|  9999    10     9
 min cost array for Node 2: 1 9 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: - - - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: - - - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: 3 1 - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 3 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  3 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 0 did not change state of Node 2's min cost array
 MAIN: rcv event, t=10004.864, at 3 src: 2, dest: 3, contents:   1 9999   0   2
@@ -1597,23 +1193,15 @@ min cost array for Node 3: 3 7 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: - - - -
 Path from Node 3 to Node 0 through Node 2: 2 0 - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: 1 - - -
 Path from Node 3 to Node 1 through Node 2: - - - -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: - - - -
 Path from Node 3 to Node 2 through Node 2: 2 - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 3 - -
-Path from Node 3 to Node 3 through Node 2: 2 3 - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 3 to Node 0:  2 0 - -
 Min cost path from Node 3 to Node 1:  1 - - -
 Min cost path from Node 3 to Node 2:  2 - - -
-Min cost path from Node 3 to Node 3:  3 - - -
 update by Node 2 did not change state of Node 3's min cost array
 MAIN: rcv event, t=10005.180, at 1 src: 2, dest: 1, contents:   1   9   0   2
 Node 1 updated by Node 2 at 10005.180211798455
@@ -1625,23 +1213,15 @@ dest 2|   21    10     9
      3|   23    12     7
 min cost array for Node 1: 10 0 9 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 3 1 -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  3 2 0 -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  3 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 update by Node 2 did not change state of Node 1's min cost array
@@ -1655,23 +1235,15 @@ dest 2|   21    10     9
      3|   23    12     7
 min cost array for Node 1: 10 0 9 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 2 1 -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 3 1 -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  3 2 0 -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  3 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 update by Node 0 did not change state of Node 1's min cost array
@@ -1685,23 +1257,15 @@ dest 2|   21    10     9
      3|   23    12     7
 min cost array for Node 1: 10 0 9 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 2 3 1
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 3 1 -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  3 2 0 -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  3 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 update by Node 0 did not change state of Node 1's min cost array
@@ -1713,23 +1277,15 @@ MAIN: rcv event, t=20000.000, at -1Distance between Node 0 and Node 1 changed to
 dest 2|   29     1 
      3|   27     3 
 min cost array for Node 0: 0 1 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 3 2 0
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: 2 3 1 -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: 1 3 2 -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: 1 3 - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  1 - - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -1746,23 +1302,15 @@ dest 2|   21    10     9
      3|   23    12     7
 min cost array for Node 1: 1 0 9 7 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 2 3 1
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 3 1 -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  3 2 - -
 Min cost path from Node 1 to Node 3:  3 - - -
 Node 1 sending update to Node 0 at 20000.0
@@ -1780,23 +1328,15 @@ Node 0 updated by Node 1 at 20000.632648701438
 dest 2|   10     1 
      3|    8     3 
 min cost array for Node 0: 0 1 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 0 - -
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: 2 3 1 -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: 1 3 2 -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: 1 3 - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  1 - - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -1811,23 +1351,15 @@ dest 2|    2    10     9
      3|    4    12     7
 min cost array for Node 1: 1 0 2 4 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 3 1 -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  0 2 3 -
 Node 1 sending update to Node 0 at 20000.856227301858
@@ -1847,23 +1379,15 @@ dest 1|    2    10     9
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: - - - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: 3 1 - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 3 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 Node 2 sending update to Node 0 at 20000.97549363689
 min cost array  for Node 2 sent to Node 0 after poisoning: 1 9999 0 2 
@@ -1883,23 +1407,15 @@ min cost array for Node 3: 3 7 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: 1 0 - -
 Path from Node 3 to Node 0 through Node 2: 2 0 - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: 1 - - -
 Path from Node 3 to Node 1 through Node 2: - - - -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: - - - -
 Path from Node 3 to Node 2 through Node 2: 2 - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 3 - -
-Path from Node 3 to Node 3 through Node 2: 2 3 - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 3 to Node 0:  2 0 - -
 Min cost path from Node 3 to Node 1:  1 - - -
 Min cost path from Node 3 to Node 2:  2 - - -
-Min cost path from Node 3 to Node 3:  3 - - -
 update by Node 1 did not change state of Node 3's min cost array
 MAIN: rcv event, t=20001.981, at 3 src: 1, dest: 3, contents:   1   0   2   4
 Node 3 updated by Node 1 at 20001.98138370922
@@ -1913,23 +1429,15 @@ min cost array for Node 3: 3 7 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: 1 0 - -
 Path from Node 3 to Node 0 through Node 2: 2 0 - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: 1 - - -
 Path from Node 3 to Node 1 through Node 2: - - - -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: 1 0 2 -
 Path from Node 3 to Node 2 through Node 2: 2 - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 0 2 3
-Path from Node 3 to Node 3 through Node 2: 2 3 - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 3 to Node 0:  2 0 - -
 Min cost path from Node 3 to Node 1:  1 - - -
 Min cost path from Node 3 to Node 2:  2 - - -
-Min cost path from Node 3 to Node 3:  3 - - -
 update by Node 1 did not change state of Node 3's min cost array
 MAIN: rcv event, t=20002.024, at 0 src: 1, dest: 0, contents:   1   0 9999 9999
 Node 0 updated by Node 1 at 20002.023743400372
@@ -1940,23 +1448,15 @@ Node 0 updated by Node 1 at 20002.023743400372
 dest 2|  9999     1 
      3|  9999     3 
 min cost array for Node 0: 0 1 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 0 - -
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: - - - -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: - - - -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: - - - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  1 - - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -1972,23 +1472,15 @@ dest 1|    2    10     9
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: 3 1 - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 3 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: 1 3 - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 1 did not change state of Node 2's min cost array
 MAIN: rcv event, t=20002.535, at 1 src: 2, dest: 1, contents:   1   2   0   2
@@ -2001,23 +1493,15 @@ dest 2|    2    10     9
      3|    4    12     7
 min cost array for Node 1: 1 0 2 4 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 0 1 -
-Path from Node 1 to Node 1 through Node 3: 3 1 - -
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  0 2 3 -
 update by Node 2 did not change state of Node 1's min cost array
@@ -2030,23 +1514,15 @@ Node 0 updated by Node 2 at 20002.65590380566
 dest 2|  9999     1 
      3|  9999     3 
 min cost array for Node 0: 0 1 1 3 
-Path from Node 0 to Node 0 through Node 0: 0 - - -
-Path from Node 0 to Node 0 through Node 1: 1 0 - -
-Path from Node 0 to Node 0 through Node 2: 2 0 - -
-Path from Node 0 to Node 0 through Node 3: - - - -
-Path from Node 0 to Node 1 through Node 0: 1 - - -
 Path from Node 0 to Node 1 through Node 1: 1 - - -
 Path from Node 0 to Node 1 through Node 2: - - - -
 Path from Node 0 to Node 1 through Node 3: - - - -
-Path from Node 0 to Node 2 through Node 0: 2 - - -
 Path from Node 0 to Node 2 through Node 1: - - - -
 Path from Node 0 to Node 2 through Node 2: 2 - - -
 Path from Node 0 to Node 2 through Node 3: - - - -
-Path from Node 0 to Node 3 through Node 0: - - - -
 Path from Node 0 to Node 3 through Node 1: - - - -
 Path from Node 0 to Node 3 through Node 2: 2 3 - -
 Path from Node 0 to Node 3 through Node 3: - - - -
-Min cost path from Node 0 to Node 0:  0 - - -
 Min cost path from Node 0 to Node 1:  1 - - -
 Min cost path from Node 0 to Node 2:  2 - - -
 Min cost path from Node 0 to Node 3:  2 3 - -
@@ -2062,23 +1538,15 @@ dest 1|    2    10   9999
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: - - - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 0 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: - - - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 1 did not change state of Node 2's min cost array
 MAIN: rcv event, t=20002.933, at 3 src: 2, dest: 3, contents:   1   2   0   2
@@ -2093,23 +1561,15 @@ min cost array for Node 3: 3 4 2 0
 Path from Node 3 to Node 0 through Node 0: - - - -
 Path from Node 3 to Node 0 through Node 1: 1 0 - -
 Path from Node 3 to Node 0 through Node 2: 2 0 - -
-Path from Node 3 to Node 0 through Node 3: - - - -
 Path from Node 3 to Node 1 through Node 0: - - - -
 Path from Node 3 to Node 1 through Node 1: 1 - - -
 Path from Node 3 to Node 1 through Node 2: 2 0 1 -
-Path from Node 3 to Node 1 through Node 3: 1 - - -
 Path from Node 3 to Node 2 through Node 0: - - - -
 Path from Node 3 to Node 2 through Node 1: 1 0 2 -
 Path from Node 3 to Node 2 through Node 2: 2 - - -
-Path from Node 3 to Node 2 through Node 3: 2 - - -
-Path from Node 3 to Node 3 through Node 0: - - - -
-Path from Node 3 to Node 3 through Node 1: 1 0 2 3
-Path from Node 3 to Node 3 through Node 2: 2 3 - -
-Path from Node 3 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 3 to Node 0:  2 0 - -
 Min cost path from Node 3 to Node 1:  2 0 1 -
 Min cost path from Node 3 to Node 2:  2 - - -
-Min cost path from Node 3 to Node 3:  3 - - -
 Node 3 sending update to Node 1 at 20002.93258461257
 min cost array  for Node 3 sent to Node 1 after poisoning: 3 4 2 0 
 Node 3 sending update to Node 2 at 20002.93258461257
@@ -2125,23 +1585,15 @@ dest 1|    2    10   9999
 min cost array for Node 2: 1 2 0 2 
 Path from Node 2 to Node 0 through Node 0: 0 - - -
 Path from Node 2 to Node 0 through Node 1: 1 0 - -
-Path from Node 2 to Node 0 through Node 2: 0 - - -
 Path from Node 2 to Node 0 through Node 3: - - - -
 Path from Node 2 to Node 1 through Node 0: 0 1 - -
 Path from Node 2 to Node 1 through Node 1: 1 - - -
-Path from Node 2 to Node 1 through Node 2: 1 - - -
 Path from Node 2 to Node 1 through Node 3: - - - -
-Path from Node 2 to Node 2 through Node 0: 0 2 - -
-Path from Node 2 to Node 2 through Node 1: 1 0 2 -
-Path from Node 2 to Node 2 through Node 2: 2 - - -
-Path from Node 2 to Node 2 through Node 3: 3 2 - -
 Path from Node 2 to Node 3 through Node 0: - - - -
 Path from Node 2 to Node 3 through Node 1: - - - -
-Path from Node 2 to Node 3 through Node 2: 3 - - -
 Path from Node 2 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 2 to Node 0:  0 - - -
 Min cost path from Node 2 to Node 1:  0 1 - -
-Min cost path from Node 2 to Node 2:  2 - - -
 Min cost path from Node 2 to Node 3:  3 - - -
 update by Node 3 did not change state of Node 2's min cost array
 MAIN: rcv event, t=20004.574, at 1 src: 3, dest: 1, contents:   3   4   2   0
@@ -2154,23 +1606,15 @@ dest 2|    2    10     9
      3|    4    12     7
 min cost array for Node 1: 1 0 2 4 
 Path from Node 1 to Node 0 through Node 0: 0 - - -
-Path from Node 1 to Node 0 through Node 1: 0 - - -
 Path from Node 1 to Node 0 through Node 2: 2 0 - -
 Path from Node 1 to Node 0 through Node 3: 3 2 0 -
-Path from Node 1 to Node 1 through Node 0: 0 1 - -
-Path from Node 1 to Node 1 through Node 1: 1 - - -
-Path from Node 1 to Node 1 through Node 2: 2 0 1 -
-Path from Node 1 to Node 1 through Node 3: 3 2 0 1
 Path from Node 1 to Node 2 through Node 0: 0 2 - -
-Path from Node 1 to Node 2 through Node 1: 2 - - -
 Path from Node 1 to Node 2 through Node 2: 2 - - -
 Path from Node 1 to Node 2 through Node 3: 3 2 - -
 Path from Node 1 to Node 3 through Node 0: 0 2 3 -
-Path from Node 1 to Node 3 through Node 1: 3 - - -
 Path from Node 1 to Node 3 through Node 2: 2 3 - -
 Path from Node 1 to Node 3 through Node 3: 3 - - -
 Min cost path from Node 1 to Node 0:  0 - - -
-Min cost path from Node 1 to Node 1:  1 - - -
 Min cost path from Node 1 to Node 2:  0 2 - -
 Min cost path from Node 1 to Node 3:  0 2 3 -
 update by Node 3 did not change state of Node 1's min cost array
